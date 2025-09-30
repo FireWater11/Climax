@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { OpenWeatherService } from '../../service/open-weather.service';
 import { WeatherResponse } from '../../models/weather-response.model';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { catchError, of } from 'rxjs';
 
 @Component({
   selector: 'app-clima',
@@ -17,7 +18,13 @@ export class Clima{
   open_weather = inject(OpenWeatherService)
   // dados_clima: WeatherResponse | null = null;
   dados_clima = toSignal<WeatherResponse | null>(
-    this.open_weather.buscarInfo()
+    this.open_weather.buscarInfo().pipe(
+      catchError(err => {
+        console.error('erro ao buscar dados' ,err); 
+        return of(null); 
+      })
+    ),
+    { initialValue: null }
   );
 
   // ngOnInit() {
