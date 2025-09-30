@@ -1,4 +1,3 @@
-
 export interface WeatherResponse {
   weather: WeatherItem[];
   main: MainWeather;
@@ -10,7 +9,6 @@ export interface WeatherItem {
   description: string;
   icon: string;
 }
-
 
 export interface MainWeather {
   temp: number;
