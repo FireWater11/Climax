@@ -34,15 +34,22 @@
     }
 }
 
-.cloud-icon {
-  font-size: 6rem; /* tamanho grande para a nuvem */
-  margin-bottom: 20px;
+// .cloud-icon {
+//   font-size: 6rem; /* tamanho grande para a nuvem */
+//   margin-bottom: 20px;
 
-  &:hover {
-    transform: scale(1.5);
-    transition: transform 0.3s;
-    cursor: pointer;
-  }
+//   &:hover {
+//     transform: scale(1.5);
+//     transition: transform 0.3s;
+//     cursor: pointer;
+//   }
+// }
+
+.temp {
+  color: #2F4F4F;
+  font-size: 1.6rem;
+  position: relative;
+  top: 1rem;
 }
 
 .app-name {

@@ -4,10 +4,11 @@ import { OpenWeatherService } from '../../service/open-weather.service';
 import { WeatherResponse } from '../../models/weather-response.model';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { catchError, of } from 'rxjs';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-clima',
-  
+  standalone: true,
   templateUrl: './clima.html',
   styleUrls: ['./clima.scss']
 })

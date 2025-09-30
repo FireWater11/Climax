@@ -2,8 +2,14 @@
     <div class="content">
         <!-- <div class="cloud-icon">☁️</div> -->
         <!-- <div class="cloud-icon"><img src="/nuvem_borda_dourada.svg"></div> -->
-        <h1 class="app-name">{{ appName }}</h1>
-        <p class="tagline">{{ tagline }}</p>
+
+        <div class="city"></div>
+
+
+        <h1 class="app-name">{{ dados_clima()?.name }}</h1>
+
+        <div class="temp">{{dados_clima()?.main?.temp}}°C</div>
+        <!-- <p class="tagline">{{ tagline }}</p> -->
     </div>
 
     <button (click)="pesquisar()" class="btn-redirect">P<br>e<br>s<br>q<br>u<br>i<br>s<br>a<br>r</button>
