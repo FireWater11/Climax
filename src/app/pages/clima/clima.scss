@@ -73,10 +73,16 @@
   justify-content: flex-end;
 }
 
+.mixmax {
+  display: flex;
+  gap: 20px;
+}
+
 .app-name {
   font-size: 4rem;
   margin: 0;
   color: #D3AF37;
+  letter-spacing: 4px;
 }
 
 .tagline {
@@ -96,7 +102,7 @@
   border-color: #D3AF37;
   font-size: 1.1rem;
   top: -13rem;
-  left: 15.5rem;
+  left: 16.5rem;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   color: #D3AF37;
@@ -107,6 +113,15 @@
     transform: scale(1.2);
     transform: translateY(-5px);
     transition: all 0.2s;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+
+  }
+  100% {
+
   }
 }
 

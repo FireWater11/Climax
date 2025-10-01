@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, timeout } from 'rxjs';
 import { WeatherResponse } from '../models/weather-response.model';
 import { HttpClient } from '@angular/common/http';
 
@@ -23,6 +23,7 @@ export class OpenWeatherService {
     const url_completa =  this.api_url + "?q=Sao+Paulo&appid="+this.api_key+"&lang=pt_br&units=metric"
 
     return this.http.get<WeatherResponse>(url_completa);
-  }
+    
+    }
 
 }
