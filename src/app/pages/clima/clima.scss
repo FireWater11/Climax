@@ -10,6 +10,7 @@
   align-items: center;
   height: 100vh;
   text-align: center;
+
 //   background: linear-gradient(to bottom, #87ceeb, #f0f8ff); /* céu azul */
 }
 
@@ -24,12 +25,15 @@
     backdrop-filter: blur(10px);
     padding: 40px;
     border-radius: 50px;
+    border: 2px solid;
+    border-color: #D3AF37;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
     &:hover {
       position: relative;
-      top: -10px;
+      cursor: pointer;
       transform: scale(1.1);
+      left: -5px;
       transition: 0.6s ease;
     }
 }
@@ -46,14 +50,31 @@
 // }
 
 .temp {
+  display: flex;
   color: #2F4F4F;
   font-size: 1.6rem;
   position: relative;
   top: 1rem;
+  font-weight: bold;
+  justify-content: flex-start;
+  list-style: 1;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.desc {
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  color: #2F4F4F;
+  font-size: 1.1rem;
+  position: relative;
+  top: -8px;
+  font-weight: bold;
+  list-style: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .app-name {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 0;
   color: #D3AF37;
 }
@@ -74,8 +95,8 @@
   border-radius: 20px;
   border-color: #D3AF37;
   font-size: 1.1rem;
-  top: -17.5rem;
-  left: 18.5rem;
+  top: -13rem;
+  left: 15.5rem;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   color: #D3AF37;

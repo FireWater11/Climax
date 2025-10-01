@@ -9,6 +9,16 @@
         <h1 class="app-name">{{ dados_clima()?.name }}</h1>
 
         <div class="temp">{{dados_clima()?.main?.temp}}°C</div>
+        
+        <div class="img-central">
+            @if (dados_clima()) {
+                @let clima = dados_clima()!.weather[0];
+                <!-- <img class="icon" [src]="'https://openweathermap.org/img/wn/' +clima.icon+ '@2x.png' "> -->
+                <!-- ESTA COMENTADO POR QUE EU ACHEI FEIO, MAS FUNCIONA -->
+                <div class="desc">{{ clima.description | titlecase}}</div>
+            }
+        </div>
+
         <!-- <p class="tagline">{{ tagline }}</p> -->
     </div>
 
